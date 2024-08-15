@@ -1,0 +1,22 @@
+{
+	"files.autoSave": "onWindowChange",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.wordWrap": "on",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"typescript.format.enable": false,
+	"typescript.validate.enable": false,
+	"prettier.trailingComma": "all",
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"eslint.enable": true,
+	"eslint.validate": ["typescript"],
+	"eslint.options": {
+		"extensions": [".ts", ".ejs", ".json"]
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/coverage": true
+	}
+}

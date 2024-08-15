@@ -1,0 +1,81 @@
+{
+	"name": "folder-structure",
+	"version": "1.0.0",
+	"description": "To the best of my knowledge, this is the ideal folder structure for configuring a Node, Express, and TypeScript project.",
+	"main": "dist/index.js",
+	"author": "Harsh Solanki",
+	"license": "MIT",
+	"engines": {
+		"node": ">=20.15.0",
+		"pnpm": ">=9.7.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/harsh-solanki21/node-ts-folder-structure"
+	},
+	"bugs": {
+		"url": "https://github.com/harsh-solanki21/node-ts-folder-structure/issues"
+	},
+	"homepage": "https://github.com/harsh-solanki21/node-ts-folder-structure#readme",
+	"scripts": {
+		"start": "pnpm build && node ./dist/index.js",
+		"dev": "ts-node-dev --respawn --poll ./src/index.ts",
+		"build": "npx tsc",
+		"test": "jest",
+		"test:watch": "jest --watchAll",
+		"test:coverage": "jest --coverage",
+		"test:unit": "jest tests/unit",
+		"test:integration": "jest tests/integration",
+		"lint": "eslint -c eslint.config.mjs",
+		"format": "prettier --write \"src/**/*.ts\"",
+		"prepare": "husky",
+		"pre-commit": "lint-staged"
+	},
+	"keywords": [
+		"folder-structure",
+		"node",
+		"express",
+		"typescript",
+		"backend"
+	],
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"express": "^4.19.2",
+		"express-validator": "^7.2.0",
+		"helmet": "^7.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.5.3"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.4.0",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/compression": "^1.7.5",
+		"@types/cookie-parser": "^1.4.7",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"@types/jsonwebtoken": "^9.0.6",
+		"@types/node": "^20.14.2",
+		"@types/supertest": "^6.0.2",
+		"dotenv": "^16.4.5",
+		"eslint": "9.x",
+		"globals": "^15.3.0",
+		"husky": "^9.1.4",
+		"jest": "^29.7.0",
+		"lint-staged": "^15.2.9",
+		"prettier": "^3.3.1",
+		"supertest": "^7.0.0",
+		"ts-jest": "^29.1.4",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.4.5",
+		"typescript-eslint": "^7.12.0"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"eslint -c eslint.config.mjs --fix",
+			"prettier --write"
+		]
+	}
+}
